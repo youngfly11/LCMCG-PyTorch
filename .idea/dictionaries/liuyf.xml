@@ -1,0 +1,37 @@
+<component name="ProjectDictionaryState">
+  <dictionary name="liuyf">
+    <words>
+      <w>anno</w>
+      <w>atte</w>
+      <w>atten</w>
+      <w>avgpool</w>
+      <w>bphr</w>
+      <w>bvis</w>
+      <w>conv</w>
+      <w>datasets</w>
+      <w>downsample</w>
+      <w>flickr</w>
+      <w>inds</w>
+      <w>intra</w>
+      <w>keypoint</w>
+      <w>keypoints</w>
+      <w>logits</w>
+      <w>msra</w>
+      <w>noent</w>
+      <w>phrsbj</w>
+      <w>phrtnobj</w>
+      <w>phrtnsbj</w>
+      <w>pooler</w>
+      <w>precomp</w>
+      <w>precompute</w>
+      <w>pretrained</w>
+      <w>rcnn</w>
+      <w>relu</w>
+      <w>resnet</w>
+      <w>segm</w>
+      <w>softmax</w>
+      <w>topk</w>
+      <w>xyxy</w>
+    </words>
+  </dictionary>
+</component>

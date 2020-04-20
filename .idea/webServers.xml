@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ac36bcc4-55d4-49ac-aa0b-d86a8ed29f0d" name="ResNet50" url="http://10.15.22.198">
+        <fileTransfer host="10.15.22.198" port="22" rootFolder="/sist-database/home/hexuming/liuyf" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="4bb54298-0afd-4eca-bf94-76c07c3a8713" name="AI-Docker" url="http://10.15.89.41">
+        <fileTransfer host="10.15.89.41" port="22033" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22033" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

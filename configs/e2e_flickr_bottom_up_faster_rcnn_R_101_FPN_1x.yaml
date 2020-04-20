@@ -1,0 +1,113 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-101"
+  BACKBONE:
+    CONV_BODY: "R-50-C4"
+    LAST_LAYER_STRIDE: 1
+
+  ROI_BOX_HEAD:
+    POOLER_RESOLUTION: 14
+    MLP_HEAD_DIM: 2048
+    POOLER_SCALES: (0.0625,)
+    ## (0.25, 0.125, 0.0625, 0.03125)
+    POOLER_SAMPLING_RATIO: 2
+    FEATURE_EXTRACTOR: "ResNet50Conv5ROIFeatureExtractor" ## "BottomUpMLPFeatureExtractor", "BottomUpFPNMLPFeatureExtractor"
+    PREDICTOR: "FPNPredictor"
+    NUM_CLASSES: 151
+
+  RESNETS:
+    BACKBONE_OUT_CHANNELS: 1024
+  RPN:
+    USE_FPN: True
+    ANCHOR_STRIDE: (4, 8, 16, 32, 64)
+    PRE_NMS_TOP_N_TRAIN: 2000
+    PRE_NMS_TOP_N_TEST: 1000
+    POST_NMS_TOP_N_TEST: 1000
+    FPN_POST_NMS_TOP_N_TEST: 1000
+  ROI_HEADS:
+    USE_FPN: True
+    NMS: 0.4
+    DETECTIONS_PER_IMG: 100
+
+  VG_ON: True
+  RELATION_ON: True
+  RELATION:
+    INCOR_ENTITIES_IN_RELATION: False
+    INTRA_LAN: True
+    INTRA_LAN_PASSING_TIME: 1
+    VISUAL_GRAPH: True
+    VISUAL_GRAPH_TYPE: 'Structure'
+    VISUAL_GRAPH_PASSING_TIME: 1
+    USE_RELATION_CONST: False
+    REL_CONST_TYPE: 'Softmax'
+    REL_PAIR_IOU: True
+    RELATION_FEATURES: False
+
+  VG:
+    FIXED_FPN: False
+    FIXED_RESNET: True
+    FIXED_EMBEDDING: False
+    FG_IOU_THRESHOLD: 0.5
+    BG_IOU_THRESHOLD: 0.1
+    FIXED_ROI_HEAD: True
+    VOCAB_FILE: "./flickr_datasets/skip-thoughts/vocab.json"
+    SKIP_THROUGH_DATA_DIR: "./flickr_datasets/skip-thoughts"
+    RESNET_PARAMS_FILE: "./flickr_datasets/bottom-up-pretrained/model_0040000.pth"
+    DETECTION_VOCAB_FILE: './flickr_datasets/flickr30k_anno/object_vocab_genome.json'
+    PHRASE_SELECT_TYPE: "mean"
+    LANGUAGE_EMBED: "GRU"
+    SPATIAL_FEAT: True
+    FG_REG_IOU_THRESHOLD: 0.5
+    OBJECT_VOCAB: False
+    PHRASE_EMBED_TYPE: 'Sent'
+    USE_BOTTOMUP_NMS: False
+    BOTTOMUP_NMS_THRESH: 1.0
+    USE_TOPN: False
+    TWO_STAGE: True
+    TWO_STAGE_TYPE: 'Uni'
+    CLS_LOSS_TYPE: 'Softmax'
+    REL_LOSS_TYPE: 'Sigmoid'
+    HEATMAP_SIZE: 64
+    RELATION_FG: 0.5
+    RELATION_BG: 0.3
+    EVAL_THRESH: 0.5
+    TOPN: 10
+    JOINT_TRANS: True
+
+
+DATASETS:
+  TRAIN: ("flickr_train",)
+#  TEST: ("flickr_val",)
+  TEST: ("flickr_val",)
+
+DATALOADER:
+  SIZE_DIVISIBILITY: 16
+  NUM_WORKERS: 16
+
+SOLVER:
+  BASE_LR: 0.01
+  RESNET_LR_FACTOR: 0.1
+  FPN_LR_FACTOR: 1.0
+  PHRASE_EMBEDDING_LR_FACTOR: 1.0
+  WEIGHT_DECAY: 0.0001
+  STEPS: (20000, 40000)
+  CHECKPOINT_PERIOD: 5000
+  START_SAVE_CHECKPOINT: 5000
+  MAX_ITER: 60001
+  USE_KLD: False
+  TYPE: "SGD"
+  REGLOSS_FACTOR: 0.1
+  RELATION_FACTOR: 0.1
+
+
+INPUT:
+  MAX_SIZE_TRAIN: 1000
+  MIN_SIZE_TRAIN: (600,)
+  MAX_SIZE_TEST: 1000
+  MIN_SIZE_TEST: 600
+
+BBOX_NORMALIZE_TARGETS_PRECOMPUTED: False
+
+
+
+
