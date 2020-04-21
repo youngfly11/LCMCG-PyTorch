@@ -10,7 +10,8 @@ Check [INSTALL.md](INSTALL.md) for installation instructions.
 We use the config "e2e_faster_rcnn_R_50_C4_1x.yaml" to train the object detector on MSCOCO dataset and extract the feature map at C4 layer.
 3. Language graph extraction by using [SceneGraphParser](https://github.com/vacancy/SceneGraphParser)
 4. Some pre-processing data, like sentence annotations, box annotations.
-5. You need to create the './flickr_datasets' folder and put all annotation in it.
+5. You need to create the './flickr_datasets' folder and put all annotation in it. I would highly recommend you to figure all 
+the data path out in this project. You can refer this two file "maskrcnn_benchmark/config/paths_catalog.py" and "maskrcnn_benchmark/data/flickr.py" for details.
 
 The pretrained object detector weights, language parsing results and annotations can be found here at baidu-disk (link:https://pan.baidu.com/s/1bYbGUsHcZJQHele87MzcMg  password:5ie6)
 
