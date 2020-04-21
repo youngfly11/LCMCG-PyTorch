@@ -5,6 +5,7 @@
       <w>atte</w>
       <w>atten</w>
       <w>avgpool</w>
+      <w>baidu</w>
       <w>bphr</w>
       <w>bvis</w>
       <w>conv</w>
@@ -16,6 +17,7 @@
       <w>keypoint</w>
       <w>keypoints</w>
       <w>logits</w>
+      <w>mscoco</w>
       <w>msra</w>
       <w>noent</w>
       <w>phrsbj</w>
