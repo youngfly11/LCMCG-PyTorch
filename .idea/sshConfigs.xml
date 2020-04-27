@@ -4,7 +4,7 @@
     <configs>
       <sshConfig authType="PASSWORD" host="10.15.22.198" id="cdb80103-7357-4500-8fbf-2b32dfdf051e" port="22" customName="ResNet50" nameFormat="CUSTOM" username="liuyf" />
       <sshConfig authType="PASSWORD" host="10.15.89.41" id="ff6b495e-0360-4cf4-89ce-01a3ac3b5fea" port="22033" customName="AI-Docker" nameFormat="CUSTOM" username="root" />
-      <sshConfig authType="PASSWORD" host="10.15.89.41" id="d9d6360a-0141-46b1-999f-3672509ed735" port="22033" customName="AI-Docker" nameFormat="CUSTOM" username="root" />
+      <sshConfig authType="PASSWORD" host="10.15.89.41" id="e4d6b1e8-ad45-42c4-9765-e144ed8b010b" port="22033" customName="AI-Docker" nameFormat="CUSTOM" username="root" />
     </configs>
   </component>
 </project>

@@ -187,7 +187,6 @@ class DetProposalVGHead(torch.nn.Module):
                         word_to_graph_conn_i = torch.Tensor(batch_word_to_graph_conn[bid]).long()
 
                         for iter in range(cfg.MODEL.RELATION.INTRA_LAN_PASSING_TIME):
-                            start_time = time.time()
                             word_embed_i, phrase_embed_i, rel_phrase_embed_i = \
                                 self.phrase_mps(word_embed_i, phrase_embed_i, rel_phrase_embed_i, relation_conn_phr_i,
                                                 word_to_graph_conn_i)
