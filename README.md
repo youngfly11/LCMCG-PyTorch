@@ -13,7 +13,7 @@ We use the config "e2e_faster_rcnn_R_50_C4_1x.yaml" to train the object detector
 5. You need to create the './flickr_datasets' folder and put all annotation in it. I would highly recommend you to figure all 
 the data path out in this project. You can refer this two file "maskrcnn_benchmark/config/paths_catalog.py" and "maskrcnn_benchmark/data/flickr.py" for details.
 
-The pretrained object detector weights, language parsing results and annotations can be found here at baidu-disk (link:https://pan.baidu.com/s/1bYbGUsHcZJQHele87MzcMg  password:5ie6)
+The pretrained object detector weights and annotations can be found here at baidu-disk (link:https://pan.baidu.com/s/1bYbGUsHcZJQHele87MzcMg  password:5ie6) or [google drive](https://drive.google.com/drive/folders/1dRp61muWDNuFG-V9KMKcZ26zR8f2ujci?usp=sharing)
 
 
 ## training
